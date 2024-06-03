@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { randomNames } from "../../names";
+import "./styles.scss";
 
 export const RandomName = () => {
   // generates a random name from data.js
@@ -56,12 +57,12 @@ export const RandomName = () => {
       }
       {randomName && (
         <div className="name-gen__result">
-          <h2 className="name-gen__result-name">
-            {randomName.first_name} {randomName.last_name}
-          </h2>
           <p className="name-gen__result-race">
             {randomName.sex}/{randomName.race}
           </p>
+          <h2 className="name-gen__result-name">
+            {randomName.first_name} {randomName.last_name}
+          </h2>
           <p className="name-gen__result-desc">{randomName.description}</p>
         </div>
       )}
